@@ -24,7 +24,6 @@ then
     cp ./bash/.bashrc ~/.bashrc
     cp ./vim/.vimrc ~/.vimrc
     ./script/vim.sh
-    ./script/powerline.sh
     echo 'finish setting up bash and vim'
 
     # running script for yay

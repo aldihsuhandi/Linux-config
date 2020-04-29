@@ -1,0 +1,26 @@
+{
+  "segments": [
+    "virtual_env",
+    "time",
+    "username",
+    {
+        "type": "stdout",
+        "command": ["echo", "archlinux"],
+        "fg_color": 15,
+        "bg_color": 8
+    },
+    "ssh",
+    "cwd",
+    "git", 
+    "hg",
+    "jobs",
+    "root"
+  ],
+  "mode": "patched",
+  "time": {
+    "format": "%H:%M"
+  },
+  "cwd": {
+    "mode": "dironly"
+  }
+}
