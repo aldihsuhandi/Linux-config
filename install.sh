@@ -4,6 +4,7 @@
 echo 'setting up bash and vim'
 cp ./bash/.bashrc ~/.bashrc
 cp ./vim/.vimrc ~/.vimrc
+./script/vim.sh
 bash
 echo 'finish setting up bash and vim'
 
