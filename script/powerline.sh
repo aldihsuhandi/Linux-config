@@ -1,7 +1,7 @@
 # !/bin/bash
 
 echo "installing powerline-shell"
-sudo pacman -S pip-python
+sudo pacman -S python-pip
 sudo pip install powerline-shell
 
 mkdir -p ~/.config/powerline-shell && powerline-shell --generate-config > ~/.config/powerline-shell/config.json
