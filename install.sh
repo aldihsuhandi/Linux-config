@@ -21,6 +21,9 @@ then
 
     # running script for yay
     ./script/yay.sh
+
+    # installing package from aur
+    yay -S discord google-chrome spotify zoom
 else
     echo 'there is nothing to do..'
 fi
