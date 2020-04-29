@@ -5,6 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# general alias
 alias cp='cp -i'
 alias mkdir='mkdir -p'
 alias free='free -h -m'
@@ -16,7 +17,7 @@ alias sv='sudo vim'
 alias svim='sudo vim'
 alias htop='bashtop'
 
-#powerline 
+# powerline 
 function _update_ps1() {
     PS1=$(powerline-shell $?)
 }
