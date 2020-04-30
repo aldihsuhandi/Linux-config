@@ -17,6 +17,9 @@ alias sv='sudo vim'
 alias svim='sudo vim'
 alias htop='bashtop'
 
+# autocd
+shopt -s autocd
+
 # powerline 
 function _update_ps1() {
     PS1=$(powerline-shell $?)
