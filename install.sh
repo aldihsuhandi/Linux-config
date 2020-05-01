@@ -36,8 +36,13 @@ else
     echo 'there is nothing to do..'
 fi
 
-echo "Install vim plugin now? [Y/N]"
-read inp3
-if [ $inp3 = "Y" -o $inp3 = "y" ]
+echo "update template for coding? [Y/N]"
+read inp4
+
+if [ $inp4 = "Y" -o $inp4 = "y" ]
 then
-    vim -c 'PluginInstall'
+    mkdir -p ~/Documents/c/template
+    mkdir -p ~/Documents/cpp/template
+    cp ./template/template.cpp ~/Documents/cpp/template/template.cpp
+    cp ./template/template.c ~/Documents/c/template/template.c
+fi
