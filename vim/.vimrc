@@ -15,7 +15,7 @@ Plugin 'preservim/nerdcommenter'
 Plugin 'preservim/nerdtree'
 Plugin 'uiiaoo/java-syntax.vim'
 
-"Color Scheme
+" Color Scheme
 Plugin 'dracula/vim', { 'name': 'dracula' }
 Plugin 'fatih/molokai'
 Plugin 'joshdick/onedark.vim'
@@ -43,8 +43,9 @@ set laststatus=2
 set splitbelow splitright
 
 " statusline
-set statusline=
+set statusline=""
 set statusline+=%#CursorLineNreNr#
+set statusline+=
 set statusline+=\ %M
 set statusline+=\ %y
 set statusline+=\ %r
@@ -79,9 +80,9 @@ let g:vim_markdown_folding_disabled = 1
 map <F1> :NERDTreeToggle<CR>
 map <F3> :w<CR>
 map <F4> :q<CR>
-map <F8> :w! <CR> : !clear && gcc -o %:r % -std=c99 -Wall -lm && ./%:r<CR>
-map <F9> :w! <CR> : !clear && g++ -o %:r % -std=gnu++17 -Wall && ./%:r<CR>
-nnoremap <F10> :w! <CR> : !clear && javac % && java Main<CR>
+map <F8> :w! <bar> !clear && gcc -o %:r % -std=c99 -Wall -lm && ./%:r<CR>
+map <F9> :w! <bar> !clear && g++ -o %:r % -std=gnu++17 -Wall && ./%:r<CR>
+nnoremap <F10> :w! <bar>  !clear && javac % && java Main<CR>
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
