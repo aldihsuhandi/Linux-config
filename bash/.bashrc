@@ -52,10 +52,11 @@ run_and_compile_java(){
 alias runjava=run_and_compile_java
 
 # alias for ls typo and somefunction
-alias ls='ls --color=auto -h'
+alias ls="exa -F -s=extensio --long -S"
 alias sl="ls"
 alias l="ls"
 alias s="ls"
+alias la="ls -a"
 
 # alias for package manager
 alias update='sudo pacman -Syyu'
