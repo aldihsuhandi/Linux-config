@@ -29,6 +29,7 @@ then
     ./script/yay.sh
 
     # installing package from aur
+    echo 'installing discord, google chrome and spotify (press ctrl + c to cancel")'
     yay -S discord google-chrome spotify zoom
 
     bash
@@ -37,9 +38,9 @@ else
 fi
 
 echo "update template for coding? [Y/N]"
-read inp4
+read var
 
-if [ $inp4 = "Y" -o $inp4 = "y" ]
+if [ $var = "Y" -o $var = "y" ]
 then
     mkdir -p ~/Documents/c/template
     mkdir -p ~/Documents/cpp/template
