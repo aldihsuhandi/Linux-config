@@ -7,6 +7,7 @@ then
     echo "copying .vimrc and .bashrc to home..."
     cp ./bash/.bashrc ~/.bashrc
     cp ./vim/.vimrc ~/.vimrc
+    cp ./alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
     echo "install vundle and powerline shell? [Y/N]"
     read inp2
     if [ $inp2 = "Y" -o $inp2 = "y" ]
@@ -14,7 +15,6 @@ then
         ./script/vim.sh
         ./script/powerline.sh
     fi
-    bash
 elif [ $inp = "N" -o $inp = "n" ]
 then
     # setting up .vimrc and .bashrc
@@ -32,7 +32,11 @@ then
     echo 'installing discord, google chrome and spotify (press ctrl + c to cancel")'
     yay -S discord google-chrome spotify zoom
 
-    bash
+    echo 'setting up alacritty'
+    yay -S alacritty
+    mkdir -p ~/.config/alacritty
+    cp ./alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+
 else
     echo 'there is nothing to do..'
 fi
@@ -47,3 +51,5 @@ then
     cp ./template/template.cpp ~/Documents/cpp/template/template.cpp
     cp ./template/template.c ~/Documents/c/template/template.c
 fi
+
+bash

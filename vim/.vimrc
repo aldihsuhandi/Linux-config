@@ -21,6 +21,7 @@ Plugin 'fatih/molokai'
 Plugin 'joshdick/onedark.vim'
 Plugin 'gosukiwi/vim-atom-dark'
 Plugin 'morhetz/gruvbox'
+Plugin 'sickill/vim-monokai'
 
 call vundle#end()   
 filetype plugin indent on
@@ -54,13 +55,15 @@ set statusline+=%= "Right side settings
 set statusline+=%#Conceal#
 set statusline+=Current:\ %4l\ Total:\ %4L
 
+
 filetype plugin on
 
 " Color Scheme
 let g:gruvbox_italic = 1
-colorscheme gruvbox
+colorscheme onedark
 set background=dark
 let g:onedark_termcolors = 1
+set termguicolors
 
 " NERDTREE
 let g:NERDSpaceDelims = 1
@@ -88,6 +91,8 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-R> :so .vimrc<CR>
+nnoremap <C-Down> :tabNext<CR>
+nnoremap <C-Up> :tabprevious<CR>
 noremap <silent> <A-Left> :vertical resize +3<CR>
 noremap <silent> <A-Right> :vertical resize -3<CR>
 noremap <silent> <A-Up> :resize +3<CR>
@@ -95,3 +100,6 @@ noremap <silent> <A-Down> :resize -3<CR>
 
 " Automatically closing braces
 inoremap {<CR> {<CR>}<Esc>ko
+
+" Alacritty fix
+set ttymouse=sgr

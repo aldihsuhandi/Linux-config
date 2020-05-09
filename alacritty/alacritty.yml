@@ -1,0 +1,156 @@
+# windows settings
+window:
+  dimension:
+    columns: 140
+    lines: 30
+  decorations: full
+  padding:
+    x: 3
+    y: 1
+scrolling:
+  history: 10000
+  multiplier: 3
+background_opacity: 0.95
+
+# font configuration
+font:
+  normal:
+    family: hack
+    style: Regular
+  bold:
+    family: hack
+    style: Bold
+  italic:
+    family: hack
+    style: Italic
+  size: 12.0
+
+# Colors
+schemes:
+  gruvbox: &gruvbox
+    # Default colors
+    primary:
+      # hard contrast: background = '#1d2021'
+      background: '#282828'
+      # soft contrast: background = '#32302f'
+      foreground: '#ebdbb2'
+    # Normal colors
+    normal:
+      black:   '#282828'
+      red:     '#cc241d'
+      green:   '#98971a'
+      yellow:  '#d79921'
+      blue:    '#458588'
+      magenta: '#b16286'
+      cyan:    '#689d6a'
+      white:   '#a89984' 
+    # Bright colors
+    bright:
+      black:   '#928374'
+      red:     '#fb4934'
+      green:   '#b8bb26'
+      yellow:  '#fabd2f'
+      blue:    '#83a598'
+      magenta: '#d3869b'
+      cyan:    '#8ec07c'
+      white:   '#ebdbb2'
+
+  dracula: &dracula
+    # Default colors
+    primary:
+      background: '#282a36'
+      foreground: '#f8f8f2'
+    # Normal colors
+    normal:
+      black:   '#000000'
+      red:     '#ff5555'
+      green:   '#50fa7b'
+      yellow:  '#f1fa8c'
+      blue:    '#caa9fa'
+      magenta: '#ff79c6'
+      cyan:    '#8be9fd'
+      white:   '#bfbfbf'
+    # Bright colors
+    bright:
+      black:   '#575b70'
+      red:     '#ff6e67'
+      green:   '#5af78e'
+      yellow:  '#f4f99d'
+      blue:    '#caa9fa'
+      magenta: '#ff92d0'
+      cyan:    '#9aedfe'
+      white:   '#e6e6e6'
+
+  molokai: &molokai
+    # Default colors
+    primary:
+      background: '#1B1D1E'
+      foreground: '#F8F8F2'
+    # Normal colors
+    normal:
+      black:   '#333333'
+      red:     '#C4265E'
+      green:   '#86B42B'
+      yellow:  '#B3B42B'
+      blue:    '#6A7EC8'
+      magenta: '#8C6BC8'
+      cyan:    '#56ADBC'
+      white:   '#E3E3DD'
+    # Bright colors
+    bright:
+      black:   '#666666'
+      red:     '#F92672'
+      green:   '#A6E22E'
+      yellow:  '#E2E22E'
+      blue:    '#819AFF'
+      magenta: '#AE81FF'
+      cyan:    '#66D9EF'
+      white:   '#F8F8F2'
+
+  onedark: &onedark
+    # Default colors
+    primary:
+      background: '#282c34'
+      foreground: '#abb2bf'
+  
+    # Normal colors
+    normal:
+      # NOTE: Use '#131613' for the `black` color if you'd like to see
+      # black text on the background.
+      black:   '#282c34'
+      red:     '#e06c75'
+      green:   '#98c379'
+      yellow:  '#d19a66'
+      blue:    '#61afef'
+      magenta: '#c678dd'
+      cyan:    '#56b6c2'
+      white:   '#abb2bf'
+  
+    # Bright colors
+    bright:
+      black:   '#5c6370'
+      red:     '#e06c75'
+      green:   '#98c379'
+      yellow:  '#d19a66'
+      blue:    '#61afef'
+      magenta: '#c678dd'
+      cyan:    '#56b6c2'
+      white:   '#ffffff'
+
+colors: *onedark
+
+# cursor
+cursor:
+  style: Underline
+  unfocused_hollow: false
+
+# key binding
+key_bindings:
+  - { key: N,         mods: Control,        action: SpawnNewInstance    }
+  - { key: V,         mods: Control|Shift,  action: Paste               }
+  - { key: C,         mods: Control|Shift,  action: Copy                }
+  - { key: W,         mods: Control|Shift,  chars: "exit\n"             }
+
+# vim fix
+env:
+  TERM: xterm-256color
