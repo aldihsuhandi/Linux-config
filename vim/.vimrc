@@ -103,4 +103,4 @@ noremap <silent> <A-Down> :resize -3<CR>
 inoremap {<CR> {<CR>}<Esc>ko
 
 " Alacritty fix
-s
+set ttymouse=sgr
