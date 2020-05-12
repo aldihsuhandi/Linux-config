@@ -14,6 +14,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'preservim/nerdcommenter'
 Plugin 'preservim/nerdtree'
 Plugin 'uiiaoo/java-syntax.vim'
+Plugin 'lilydjwg/colorizer'
 
 " Color Scheme
 Plugin 'dracula/vim', { 'name': 'dracula' }
@@ -102,4 +103,4 @@ noremap <silent> <A-Down> :resize -3<CR>
 inoremap {<CR> {<CR>}<Esc>ko
 
 " Alacritty fix
-set ttymouse=sgr
+s
