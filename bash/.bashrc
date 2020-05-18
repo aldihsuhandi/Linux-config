@@ -62,3 +62,6 @@ alias la="ls -a"
 # alias for package manager
 alias update='sudo pacman -Syyu'
 alias search='pacman -Qs'
+
+# curl?
+alias weather='curl wttr.in'
