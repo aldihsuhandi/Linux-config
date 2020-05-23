@@ -137,7 +137,7 @@ schemes:
       cyan:    '#56b6c2'
       white:   '#ffffff'
 
-colors: *onedark
+colors: *dracula
 
 # cursor
 cursor:
@@ -149,7 +149,7 @@ key_bindings:
   - { key: N,         mods: Control,        action: SpawnNewInstance    }
   - { key: V,         mods: Control|Shift,  action: Paste               }
   - { key: C,         mods: Control|Shift,  action: Copy                }
-  - { key: W,         mods: Control|Shift,  chars: "exit\n"             }
+  - { key: W,         mods: Control|Shift,  chars: "\nexit\n"             }
 
 # vim fix
 env:
