@@ -29,7 +29,7 @@ filetype plugin indent on
 
 " general
 set tabstop=4 
-set softtabstop=0 
+set softtabstop=4
 set shiftwidth=4
 set expandtab
 set smarttab
@@ -56,12 +56,11 @@ set statusline+=%= "Right side settings
 set statusline+=%#Conceal#
 set statusline+=Current:\ %4l\ Total:\ %4L
 
-
 filetype plugin on
 
 " Color Scheme
 let g:gruvbox_italic = 1
-colorscheme onedark
+colorscheme dracula
 set background=dark
 let g:onedark_termcolors = 1
 set termguicolors
@@ -98,6 +97,8 @@ noremap <silent> <A-Left> :vertical resize +3<CR>
 noremap <silent> <A-Right> :vertical resize -3<CR>
 noremap <silent> <A-Up> :resize +3<CR>
 noremap <silent> <A-Down> :resize -3<CR>
+vmap  <plug>NERDCommenterToggle
+nmap  <plug>NERDCommenterToggle
 
 " Automatically closing braces
 inoremap {<CR> {<CR>}<Esc>ko
