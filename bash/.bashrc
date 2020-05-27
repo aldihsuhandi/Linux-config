@@ -10,7 +10,6 @@ alias cp='cp -i'
 alias mkdir='mkdir -p'
 alias free='free -h -m'
 alias kernel='uname -r'
-alias neofetch='neofetch | lolcat'
 alias nf='neofetch'
 alias cl='clear'
 alias v='vim'
@@ -60,7 +59,7 @@ alias s="ls"
 alias la="ls -a"
 
 # alias for package manager
-alias update='sudo pacman -Syyu'
+alias update='sudo pacman -Syu'
 alias search='pacman -Qs'
 
 # curl?
