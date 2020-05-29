@@ -13,6 +13,20 @@ typedef pair<int, int> pii;
 
 const int INF = 1000000000;
 
+ll power(ll a, ll b)
+{
+    ll ret = 1;
+    while(b > 0){
+        if(b % 2 == 1)
+            ret *= a;
+        
+        a *= a;
+        b /= 2;
+    }
+
+    return ret;
+}
+
 int main()
 {
     
