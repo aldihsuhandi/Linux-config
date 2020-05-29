@@ -17,10 +17,10 @@ ll power(ll a, ll b)
 {
     ll ret = 1;
     while(b > 0){
-        if(b % 2 == 1)
-            ret *= a;
+        if(b & 1)
+            ret = ret * a;
         
-        a *= a;
+        a = a * a;
         b /= 2;
     }
 
