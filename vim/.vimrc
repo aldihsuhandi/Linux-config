@@ -83,6 +83,7 @@ let g:vim_markdown_folding_disabled = 1
 map <F1> :NERDTreeToggle<CR>
 map <F3> :w<CR>
 map <F4> :q<CR>
+map <F5> :w! <bar> !clear && g++ -o %:r % -std=gnu++17 -Wall -Wextra<CR>
 map <F8> :w! <bar> !clear && gcc -o %:r % -std=c99 -Wall -lm && ./%:r<CR>
 map <F9> :w! <bar> !clear && g++ -o %:r % -std=gnu++17 -Wall && ./%:r<CR>
 nnoremap <F10> :w! <bar>  !clear && javac % && java Main<CR>
@@ -91,6 +92,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-R> :so .vimrc<CR>
+nnoremap <A-U> :redo<CR>
 nnoremap <C-Down> :tabNext<CR>
 nnoremap <C-Up> :tabprevious<CR>
 noremap <silent> <A-Left> :vertical resize +3<CR>
