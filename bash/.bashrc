@@ -52,7 +52,7 @@ run_and_compile_java(){
 alias runjava=run_and_compile_java
 
 # alias for ls typo and somefunction
-alias ls="exa -F -s=name --long -S"
+alias ls="exa -F -s=name --long -S -h"
 alias sl="ls"
 alias l="ls"
 alias s="ls"

@@ -5,7 +5,7 @@
     "username",
     {
         "type": "stdout",
-        "command": ["echo", "archlinux"],
+        "command": ["echo", "manjaro"],
         "fg_color": 15,
         "bg_color": 8
     },

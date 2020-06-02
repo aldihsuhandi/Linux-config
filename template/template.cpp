@@ -13,21 +13,33 @@ typedef pair<int, int> pii;
 
 const int INF = 1000000000;
 
-ll power(ll a, ll b)
-{
-    ll ret = 1;
-    while(b > 0){
-        if(b & 1)
-            ret = ret * a;
+// ll power(ll a, ll b)
+// {
+//     ll ret = 1;
+//     while(b > 0){
+//         if(b & 1)
+//             ret = ret * a;
         
-        a = a * a;
-        b /= 2;
-    }
+//         a = a * a;
+//         b /= 2;
+//     }
 
-    return ret;
+//     return ret;
+// }
+
+void solve()
+{
+    
 }
 
 int main()
 {
+    solve();
     
+    // int t;
+    // scanf("%d", &t);
+    // for(int tc = 1;tc <= t;++tc){
+    //     printf("Case #%d: ", tc);
+    //     solve();
+    // }
 }
