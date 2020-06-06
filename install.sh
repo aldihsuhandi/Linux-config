@@ -1,6 +1,7 @@
 # !/bin/bash
 
 echo "only copy vimrc and bashrc? [Y/N]"
+echo "(x for do not install anything)"
 read inp
 if [ $inp = "Y" -o $inp = "y" ]
 then
