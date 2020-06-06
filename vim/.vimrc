@@ -7,14 +7,17 @@ call vundle#begin('~/.vim/plug')
 Plugin 'VundleVim/Vundle.vim'
 
 " Functional plugin
-Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'preservim/nerdcommenter'
 Plugin 'preservim/nerdtree'
-Plugin 'uiiaoo/java-syntax.vim'
 Plugin 'lilydjwg/colorizer'
+
+" Syntax Highlight
+Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'vim-python/python-syntax'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'uiiaoo/java-syntax.vim'
 
 " Color Scheme
 Plugin 'dracula/vim', { 'name': 'dracula' }
@@ -78,6 +81,11 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 
 " Markdown
 let g:vim_markdown_folding_disabled = 1
+
+" Python
+let g:python_highlight_all = 1
+let g:python_highlight_indent_errors = 1
+let g:python_highlight_space_errorss = 1
 
 " shortcut
 map <F1> :NERDTreeToggle<CR>
