@@ -34,7 +34,7 @@ then
     yay -S discord google-chrome spotify zoom
 
     echo 'setting up alacritty'
-    yay -S alacritty
+    yay -S alacritty exa
     mkdir -p ~/.config/alacritty
     cp ./alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 
