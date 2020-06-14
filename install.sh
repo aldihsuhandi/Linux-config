@@ -1,13 +1,15 @@
 # !/bin/bash
 
-echo "only copy vimrc and bashrc? [Y/N]"
+echo "only copy dot files and configs? [Y/N]"
 echo "(x for do not install anything)"
 read inp
 if [ $inp = "Y" -o $inp = "y" ]
 then
-    echo "copying .vimrc and .bashrc to home..."
+    echo "copying .vimrc, .zshrc and .bashrc to home..."
     cp ./bash/.bashrc ~/.bashrc
     cp ./vim/.vimrc ~/.vimrc
+    cp ./zsh/.zshrc ~/.zshrc
+    echo "copying alacritty config..."
     cp ./alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
     echo "install vundle and powerline shell? [Y/N]"
     read inp2

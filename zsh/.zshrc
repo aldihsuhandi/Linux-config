@@ -1,10 +1,3 @@
-#
-# ~/.bashrc
-#
-
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
 # general alias
 alias cp='cp -i'
 alias mkdir='mkdir -p'
@@ -15,19 +8,30 @@ alias v='vim'
 alias sv='sudo vim'
 alias svim='sudo vim'
 alias htop='bashtop'
-alias alacritty='alacritty -e zsh'
-
-# autocd
-shopt -s autocd
+alias grep='rg'
 
 # powerline 
-function _update_ps1() {
-    PS1=$(powerline-shell $?)
+function powerline_precmd() {
+    PS1="$(powerline-shell --shell zsh $?)"
 }
 
-if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
-    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+function install_powerline_precmd() {
+  for s in "${precmd_functions[@]}"; do
+    if [ "$s" = "powerline_precmd" ]; then
+      return
+    fi
+  done
+  precmd_functions+=(powerline_precmd)
+}
+
+if [ "$TERM" != "linux" ]; then
+    install_powerline_precmd
 fi
+
+# autocd
+setopt  autocd autopushd
+autoload -U compinit
+compinit
 
 # coding template
 templatecpp(){
@@ -64,3 +68,4 @@ alias search='pacman -Qs'
 
 # curl?
 alias weather='curl wttr.in'
+
