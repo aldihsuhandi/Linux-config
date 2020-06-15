@@ -1,11 +1,18 @@
 #include<stdio.h>
-#include<stdlib.h>
+#include<malloc.h>
 #include<math.h>
 #define true 1
 #define false 0
 #define ll long long
 #define ull unsigned ll
 #define pow2(n) (1 << (n))
+
+/* -- STL -- */
+typedef struct pair
+{
+    int fi, se;
+} pair;
+/* -- STL -- */
 
 /* -- Utility function -- */
 int strLength(char x[])
