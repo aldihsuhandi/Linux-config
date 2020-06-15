@@ -2,14 +2,17 @@
 
 echo "only copy dot files and configs? [Y/N]"
 echo "(x for do not install anything)"
+echo ' '
 read inp
 if [ $inp = "Y" -o $inp = "y" ]
 then
     echo "copying .vimrc, .zshrc and .bashrc to home..."
+    echo ' '
     cp ./bash/.bashrc ~/.bashrc
     cp ./vim/.vimrc ~/.vimrc
     cp ./zsh/.zshrc ~/.zshrc
     echo "copying alacritty config..."
+    echo ' '
     cp ./alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
     echo "install vundle and powerline shell? [Y/N]"
     read inp2
@@ -18,33 +21,48 @@ then
         ./script/vim.sh
         ./script/powerline.sh
     fi
+    echo ' '
 elif [ $inp = "N" -o $inp = "n" ]
 then
+    # setting up zsh
+    echo "do you want to install zsh? [Y/N]"
+    read zshinp
+    if [ $zshinp = "Y" -o $zshinp = "y" ]
+    then
+        sudo pacman -S zsh
+        cp ./zsh/.zshrc ~/.zshrc
+    fi
+    echo ' '
+
     # setting up .vimrc and .bashrc
     echo 'setting up bash and vim'
+    echo ' '
     cp ./bash/.bashrc ~/.bashrc
     cp ./vim/.vimrc ~/.vimrc
     ./script/vim.sh
     ./script/powerline.sh
-    echo 'finish setting up bash and vim'
 
     # running script for yay
     ./script/yay.sh
 
     # installing package from aur
     echo 'installing discord, google chrome and spotify (press ctrl + c to cancel")'
-    yay -S discord google-chrome spotify zoom
+    echo ' '
+    yay -S discord google-chrome spotify zoom teams
 
     echo 'setting up alacritty'
+    echo ' '
     yay -S alacritty exa
     mkdir -p ~/.config/alacritty
     cp ./alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 
 else
     echo 'there is nothing to do..'
+    echo ' '
 fi
 
 echo "update template for coding? [Y/N]"
+echo ' '
 read var
 
 if [ $var = "Y" -o $var = "y" ]
