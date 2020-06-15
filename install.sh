@@ -45,14 +45,13 @@ then
     # running script for yay
     ./script/yay.sh
 
-    # installing package from aur
-    echo 'installing discord, google chrome and spotify (press ctrl + c to cancel")'
+    # installing package from repo
+    echo 'installing various applications (press ctrl + c to cancel")'
     echo ' '
-    yay -S discord google-chrome spotify zoom teams
+    yay -S discord google-chrome spotify zoom teams alacritty exa audacious minetime-bin playerctl blueman alsa winetricks firefox lattedock kdeconnect jdk-openjdk11 jre11-openjdk
 
     echo 'setting up alacritty'
     echo ' '
-    yay -S alacritty exa
     mkdir -p ~/.config/alacritty
     cp ./alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 
