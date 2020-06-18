@@ -149,7 +149,7 @@ key_bindings:
   - { key: N,         mods: Control,        action: SpawnNewInstance    }
   - { key: V,         mods: Control|Shift,  action: Paste               }
   - { key: C,         mods: Control|Shift,  action: Copy                }
-  - { key: W,         mods: Control|Shift,  chars: "\nexit\n"           }
+  - { key: W,         mods: Control|Shift,  action: Quit                }
 
 # vim fix
 env:
