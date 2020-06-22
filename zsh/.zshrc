@@ -1,5 +1,5 @@
 # general alias
-alias p='cp -i'
+alias cp='cp -i'
 alias mkdir='mkdir -p'
 alias free='free -h -m'
 alias kernel='uname -r'
@@ -68,16 +68,4 @@ alias search='pacman -Qs'
 
 # curl?
 alias weather='curl wttr.in'
-
-# neofetch
-neo(){
-    neofetch > nf.in
-    ~/./test
-    cat nf.out
-    rm nf.in nf.out
-}
-
-alias neofetch=neo
-
-# neofetch
 
