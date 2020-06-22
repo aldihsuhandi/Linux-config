@@ -1,5 +1,5 @@
 # general alias
-alias cp='cp -i'
+alias p='cp -i'
 alias mkdir='mkdir -p'
 alias free='free -h -m'
 alias kernel='uname -r'
@@ -56,7 +56,7 @@ run_and_compile_java(){
 alias runjava=run_and_compile_java
 
 # alias for ls typo and somefunction
-alias ls="exa -F -s=name --long -S -h"
+alias ls="exa -F -s=name --long -S -h --group-directories-first"
 alias sl="ls"
 alias l="ls"
 alias s="ls"
@@ -68,4 +68,16 @@ alias search='pacman -Qs'
 
 # curl?
 alias weather='curl wttr.in'
+
+# neofetch
+neo(){
+    neofetch > nf.in
+    ~/./test
+    cat nf.out
+    rm nf.in nf.out
+}
+
+alias neofetch=neo
+
+# neofetch
 
