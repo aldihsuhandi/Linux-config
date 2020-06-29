@@ -1,3 +1,9 @@
+
+export ZSH="/home/aldih/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+source $ZSH/oh-my-zsh.sh
+
 # general alias
 alias cp='cp -i'
 alias mkdir='mkdir -p'

@@ -29,8 +29,7 @@ then
     read zshinp
     if [ $zshinp = "Y" -o $zshinp = "y" ]
     then
-        sudo pacman -S zsh
-        cp ./zsh/.zshrc ~/.zshrc
+        ./script/zsh/sh
     fi
     echo ' '
 
