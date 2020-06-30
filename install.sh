@@ -7,7 +7,7 @@ read inp
 if [ $inp = "Y" -o $inp = "y" ]
 then
     echo "copying .vimrc, .zshrc and .bashrc to home..."
-    echo ' '
+    # echo ' '
     cp ./bash/.bashrc ~/.bashrc
     cp ./vim/.vimrc ~/.vimrc
     cp ./zsh/.zshrc ~/.zshrc
@@ -24,13 +24,6 @@ then
     echo ' '
 elif [ $inp = "N" -o $inp = "n" ]
 then
-    # setting up zsh
-    echo "do you want to install zsh? [Y/N]"
-    read zshinp
-    if [ $zshinp = "Y" -o $zshinp = "y" ]
-    then
-        ./script/zsh/sh
-    fi
     echo ' '
 
     # setting up .vimrc and .bashrc
@@ -69,6 +62,15 @@ then
     mkdir -p ~/Documents/cpp/template
     cp ./template/template.cpp ~/Documents/cpp/template/template.cpp
     cp ./template/template.c ~/Documents/c/template/template.c
+fi
+
+# setting up zsh
+echo "do you want to install zsh? [Y/N]"
+read zshinp
+if [ $zshinp = "Y" -o $zshinp = "y" ]
+then
+    ./script/zsh/sh
+    zsh
 fi
 
 bash
