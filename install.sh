@@ -40,7 +40,7 @@ then
     # installing package from repo
     echo 'installing various applications (press ctrl + c to cancel")'
     echo ' '
-    yay -S discord google-chrome spotify zoom teams alacritty exa audacious minetime-bin playerctl blueman alsa winetricks firefox kdeconnect
+    yay -S discord google-chrome spotify zoom teams alacritty exa audacious minetime-bin playerctl blueman alsa winetricks firefox kdeconnect neofetch ripgrep jre-openjdk
 
     echo 'setting up alacritty'
     echo ' '
