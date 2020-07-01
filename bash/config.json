@@ -3,7 +3,6 @@
   "segments": [
     "virtual_env",
     "ssh",
-    "hostname",
     "cwd",
     "git", 
     "hg",
