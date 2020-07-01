@@ -10,7 +10,7 @@ window:
 scrolling:
   history: 10000
   multiplier: 2
-background_opacity: 0.95
+background_opacity: 0.90
 
 # font configuration
 font:
@@ -137,7 +137,79 @@ schemes:
       cyan:    '#56b6c2'
       white:   '#ffffff'
 
-colors: *dracula
+  iceberg: &iceberg
+    # Default colors
+    primary:
+      background: '0xe8e9ec'
+      foreground: '0x33374c'
+
+    # Normal colors
+    normal:
+      black:   '0xdcdfe7'
+      red:     '0xcc517a'
+      green:   '0x668e3d'
+      yellow:  '0xc57339'
+      blue:    '0x2d539e'
+      magenta: '0x7759b4'
+      cyan:    '0x3f83a6'
+      white:   '0x33374c'
+
+    # Bright colors
+    bright:
+      black:   '0x8389a3'
+      red:     '0xcc3768'
+      green:   '0x598030'
+      yellow:  '0xb6662d'
+      blue:    '0x22478e'
+      magenta: '0x6845ad'
+      cyan:    '0x327698'
+      white:   '0x262a3f'
+  material_theme: &material
+    primary:
+      background: '0x1e282d'
+      foreground: '0xc4c7d1'
+    normal:
+      black:   '0x666666'
+      red:     '0xeb606b'
+      green:   '0xc3e88d'
+      yellow:  '0xf7eb95'
+      blue:    '0x80cbc4'
+      magenta: '0xff2f90'
+      cyan:    '0xaeddff'
+      white:   '0xffffff'
+    bright:
+      black:   '0xa1a1a1'
+      red:     '0xeb606b'
+      green:   '0xc3e88d'
+      yellow:  '0xf7eb95'
+      blue:    '0x7dc6bf'
+      magenta: '0x6c71c4'
+      cyan:    '0x35434d'
+      white:   '0xffffff'
+    snazzy: &snazzy
+      primary:
+        background: '0x282a36'
+        foreground: '0xeff0eb'
+      normal:
+        black:   '0x282a36'
+        red:     '0xff5c57'
+        green:   '0x5af78e'
+        yellow:  '0xf3f99d'
+        blue:    '0x57c7ff'
+        magenta: '0xff6ac1'
+        cyan:    '0x9aedfe'
+        white:   '0xf1f1f0'
+      bright:
+        black:   '0x686868'
+        red:     '0xff5c57'
+        green:   '0x5af78e'
+        yellow:  '0xf3f99d'
+        blue:    '0x57c7ff'
+        magenta: '0xff6ac1'
+        cyan:    '0x9aedfe'
+        white:   '0xf1f1f0'
+
+colors: *snazzy
 
 # cursor
 cursor:
@@ -154,3 +226,4 @@ key_bindings:
 # vim fix
 env:
   TERM: xterm-256color
+
