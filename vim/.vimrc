@@ -1,4 +1,3 @@
-
 set nocompatible
 filetype off
 
@@ -29,6 +28,7 @@ Plugin 'joshdick/onedark.vim'
 Plugin 'gosukiwi/vim-atom-dark'
 Plugin 'morhetz/gruvbox'
 Plugin 'sickill/vim-monokai'
+Plugin 'reedes/vim-colors-pencil'
 
 call vundle#end()   
 filetype plugin indent on
@@ -62,7 +62,7 @@ filetype plugin on
 
 " Color Scheme
 let g:gruvbox_italic = 1
-colorscheme onedark
+colorscheme pencil
 set background=dark
 let g:onedark_termcolors = 1
 set termguicolors
