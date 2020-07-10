@@ -40,12 +40,16 @@ then
     # installing package from repo
     echo 'installing various applications (press ctrl + c to cancel")'
     echo ' '
-    yay -S discord google-chrome spotify zoom teams alacritty exa audacious minetime-bin playerctl alsa winetricks firefox kdeconnect neofetch ripgrep noto-fonts-emoji
+    yay -S discord google-chrome spotify zoom teams alacritty exa audacious minetime-bin playerctl alsa winetricks firefox kdeconnect neofetch ripgrep noto-fonts-emoji noto-fonts-cjk
     
     echo 'setting up alacritty'
     echo ' '
     mkdir -p ~/.config/alacritty
     cp ./alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+
+    echo 'changing default github editor to vim'
+    echo ' '
+    git config --global core.editor "vim"
 
 else
     echo 'there is nothing to do..'
