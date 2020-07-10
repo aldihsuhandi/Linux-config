@@ -40,8 +40,8 @@ then
     # installing package from repo
     echo 'installing various applications (press ctrl + c to cancel")'
     echo ' '
-    yay -S discord google-chrome spotify zoom teams alacritty exa audacious minetime-bin playerctl blueman alsa winetricks firefox kdeconnect neofetch ripgrep jre-openjdk
-
+    yay -S discord google-chrome spotify zoom teams alacritty exa audacious minetime-bin playerctl alsa winetricks firefox kdeconnect neofetch ripgrep noto-fonts-emoji
+    
     echo 'setting up alacritty'
     echo ' '
     mkdir -p ~/.config/alacritty
