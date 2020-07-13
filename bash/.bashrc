@@ -7,6 +7,8 @@
 
 # general alias
 alias cp='cp -i'
+alias rm='rm -i'
+alias mv='mv -i'
 alias mkdir='mkdir -p'
 alias free='free -h -m'
 alias kernel='uname -r'

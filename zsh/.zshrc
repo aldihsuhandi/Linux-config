@@ -5,6 +5,8 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # general alias
+alias rm='rm -i'
+alias mv='mv -i'
 alias cp='cp -i'
 alias mkdir='mkdir -p'
 alias free='free -h -m'
