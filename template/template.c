@@ -3,6 +3,7 @@
 #include<math.h>
 #define true 1
 #define false 0
+#define bool short
 #define ll long long
 #define ull unsigned ll
 #define pow2(n) (1 << (n))
@@ -75,7 +76,14 @@ ll power(ll a, ll b)
 
 int main()
 {
-    
+    solve();
+
+    /* int n; */
+    /* scanf("%d", &n); */
+    /* for(int i = 0;i < n;++i){ */
+    /*     printf("Case #%d: ", i + 1); */
+    /*     solve(); */
+    /* } */
     
     return 0;
 }
