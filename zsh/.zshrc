@@ -71,7 +71,7 @@ alias s="ls"
 alias la="ls -a"
 
 # alias for package manager
-alias update='sudo pacman -Syu'
+alias update='yay'
 alias search='pacman -Qs'
 
 # curl?
