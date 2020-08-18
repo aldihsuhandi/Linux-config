@@ -69,12 +69,12 @@ then
 fi
 
 # setting up zsh
-echo "do you want to install zsh? [Y/N]"
-read zshinp
-if [ $zshinp = "Y" -o $zshinp = "y" ]
-then
-    ./script/zsh/sh
-    zsh
-fi
+# echo "do you want to install zsh? [Y/N]"
+# read zshinp
+# if [ $zshinp = "Y" -o $zshinp = "y" ]
+# then
+#     ./script/zsh/sh
+#     zsh
+# fi
 
 bash

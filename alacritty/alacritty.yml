@@ -23,7 +23,7 @@ font:
   italic:
     family: hack
     style: Italic
-  size: 12.0
+  size: 11.0
 
 # Colors
 schemes:
