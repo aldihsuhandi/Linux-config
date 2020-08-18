@@ -6,9 +6,9 @@
 [[ $- != *i* ]] && return
 
 # general alias
-alias cp='cp -i'
 alias rm='rm -i'
 alias mv='mv -i'
+alias cp='cp -i'
 alias mkdir='mkdir -p'
 alias free='free -h -m'
 alias kernel='uname -r'
@@ -17,7 +17,34 @@ alias v='vim'
 alias sv='sudo vim'
 alias svim='sudo vim'
 alias htop='bashtop'
-alias alacritty='alacritty -e zsh'
+alias grep='rg'
+alias df='df -h'
+
+# extraction command
+extract ()
+{
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)   tar xjf $1   ;;
+      *.tar.gz)    tar xzf $1   ;;
+      *.bz2)       bunzip2 $1   ;;
+      *.rar)       unrar x $1   ;;
+      *.gz)        gunzip $1    ;;
+      *.tar)       tar xf $1    ;;
+      *.tbz2)      tar xjf $1   ;;
+      *.tgz)       tar xzf $1   ;;
+      *.zip)       unzip $1     ;;
+      *.Z)         uncompress $1;;
+      *.7z)        7z x $1      ;;
+      *.deb)       ar x $1      ;;
+      *.tar.xz)    tar xf $1    ;;
+      *.tar.zst)   unzstd $1    ;;      
+      *)           echo "'$1' cannot be extracted via ex()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
 
 # autocd
 shopt -s autocd
@@ -55,10 +82,11 @@ alias runjava=run_and_compile_java
 
 # alias for ls typo and somefunction
 alias ls="exa -F -s=name --long -S -h --group-directories-first -G"
+alias la="ls -a"
+alias ld="exa -F -s=name --long -S -h -D -G"
 alias sl="ls"
 alias l="ls"
 alias s="ls"
-alias la="ls -a"
 
 # alias for package manager
 alias update='yay'
@@ -66,3 +94,4 @@ alias search='pacman -Qs'
 
 # curl?
 alias weather='curl wttr.in'
+alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
