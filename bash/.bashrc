@@ -39,7 +39,7 @@ extract ()
       *.deb)       ar x $1      ;;
       *.tar.xz)    tar xf $1    ;;
       *.tar.zst)   unzstd $1    ;;      
-      *)           echo "'$1' cannot be extracted via ex()" ;;
+      *)           echo "'$1' cannot be extracted via extract" ;;
     esac
   else
     echo "'$1' is not a valid file"
