@@ -23,7 +23,7 @@ font:
   italic:
     family: hack
     style: Italic
-  size: 11.0
+  size: 8.5
 
 # Colors
 schemes:
@@ -247,6 +247,8 @@ key_bindings:
   - { key: V,         mods: Control|Shift,  action: Paste               }
   - { key: C,         mods: Control|Shift,  action: Copy                }
   - { key: W,         mods: Control|Shift,  action: Quit                }
+  - { key: K,         mods: Shift,          action: ScrollPageUp        }
+  - { key: J,         mods: Shift,          action: ScrollPageDown      }
 
 # vim fix
 env:
