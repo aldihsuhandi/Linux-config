@@ -40,7 +40,7 @@ then
     # installing package from repo
     echo 'installing various applications (press ctrl + c to cancel")'
     echo ' '
-    yay -S discord brave spotify alacritty exa audacious minetime-bin playerctl alsa winetricks firefox kdeconnect neofetch ripgrep noto-fonts-emoji noto-fonts-cjk mailspring gnome-keyring libgnome-keyring unrar
+    yay -S discord brave spotify alacritty exa audacious minetime-bin playerctl alsa winetricks firefox kdeconnect neofetch ripgrep noto-fonts-emoji noto-fonts-cjk mailspring gnome-keyring libgnome-keyring unrar bitwarden-bin
     
     echo 'setting up alacritty'
     echo ' '
