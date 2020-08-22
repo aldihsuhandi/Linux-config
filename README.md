@@ -9,7 +9,7 @@ A shell script to install everything I use daily, only work for archlinux deriva
     <li>spotify</li>
     <li>alacritty</li>
     <li>exa</li>
-    <li>audaciou</li>s
+    <li>audacious</li>
     <li>minetime</li>
     <li>playerctl</li>
     <li>alsa</li>
