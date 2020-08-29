@@ -2,8 +2,8 @@
 
 echo "only copy dot files and configs? [Y/N]"
 echo "(x for do not install anything)"
-echo ' '
 read inp
+echo ' '
 if [ $inp = "Y" -o $inp = "y" ]
 then
     echo "copying .vimrc, .zshrc and .bashrc to home..."
@@ -16,15 +16,14 @@ then
     cp ./alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
     echo "install vundle and powerline shell? [Y/N]"
     read inp2
+    echo ' '
     if [ $inp2 = "Y" -o $inp2 = "y" ]
     then
         ./script/vim.sh
         ./script/powerline.sh
     fi
-    echo ' '
 elif [ $inp = "N" -o $inp = "n" ]
 then
-    echo ' '
 
     # setting up .vimrc and .bashrc
     echo 'setting up bash and vim'
@@ -57,8 +56,8 @@ else
 fi
 
 echo "update template for coding? [Y/N]"
-echo ' '
 read var
+echo ' '
 
 if [ $var = "Y" -o $var = "y" ]
 then
@@ -76,5 +75,3 @@ fi
 #     ./script/zsh/sh
 #     zsh
 # fi
-
-bash
