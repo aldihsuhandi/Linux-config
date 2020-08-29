@@ -91,6 +91,7 @@ alias s="ls"
 # alias for package manager
 alias update='yay'
 alias search='pacman -Qs'
+alias ccache='yay -Scc --noconfirm'
 
 # curl?
 alias weather='curl wttr.in'

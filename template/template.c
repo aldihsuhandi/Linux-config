@@ -8,13 +8,6 @@
 #define ull unsigned ll
 #define pow2(n) (1 << (n))
 
-/* -- STL -- */
-typedef struct pair
-{
-    int fi, se;
-} pair;
-/* -- STL -- */
-
 /* -- Utility function -- */
 int strLength(char x[])
 {
@@ -74,6 +67,11 @@ ll power(ll a, ll b)
 }
 /* -- Utility function -- */
 
+void solve()
+{
+    ;
+}
+
 int main()
 {
     solve();
@@ -84,6 +82,4 @@ int main()
     /*     printf("Case #%d: ", i + 1); */
     /*     solve(); */
     /* } */
-    
-    return 0;
 }
