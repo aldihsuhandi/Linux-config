@@ -247,8 +247,8 @@ key_bindings:
   - { key: V,         mods: Control|Shift,  action: Paste               }
   - { key: C,         mods: Control|Shift,  action: Copy                }
   - { key: W,         mods: Control|Shift,  action: Quit                }
-  - { key: K,         mods: Shift,          action: ScrollPageUp        }
-  - { key: J,         mods: Shift,          action: ScrollPageDown      }
+  - { key: K,         mods: Control|Shift,          action: ScrollPageUp        }
+  - { key: J,         mods: Control|Shift,          action: ScrollPageDown      }
 
 # vim fix
 env:
