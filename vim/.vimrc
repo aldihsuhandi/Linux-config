@@ -50,6 +50,10 @@ syntax on
 set laststatus=2
 set splitbelow splitright
 
+" cursor
+let &t_SI = "\<Esc>]50;CursorShape=2\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x6"
+
 " statusline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
@@ -116,4 +120,5 @@ inoremap {<CR> {<CR>}<Esc>ko
 
 " Alacritty fix
 set ttymouse=sgr
+
 
