@@ -239,6 +239,7 @@ colors: *pencil_dark
 # cursor
 cursor:
   style: Underline
+  vi_mode_style: Block
   unfocused_hollow: false
 
 # key binding
