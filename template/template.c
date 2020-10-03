@@ -74,12 +74,10 @@ void solve()
 
 int main()
 {
-    solve();
-
-    /* int n; */
-    /* scanf("%d", &n); */
-    /* for(int i = 0;i < n;++i){ */
-    /*     printf("Case #%d: ", i + 1); */
-    /*     solve(); */
-    /* } */
+    int t = 1;
+    /* scanf("%d", &t); */
+    for(int tc = 1;tc <= t;++tc){
+        /* printf("Case #%d: ", tc); */
+        solve();
+    }
 }

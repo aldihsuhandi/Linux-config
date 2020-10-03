@@ -29,6 +29,7 @@ Plugin 'gosukiwi/vim-atom-dark'
 Plugin 'morhetz/gruvbox'
 Plugin 'sickill/vim-monokai'
 Plugin 'reedes/vim-colors-pencil'
+Plugin 'liuchengxu/space-vim-dark'
 
 call vundle#end()   
 filetype plugin indent on
@@ -66,8 +67,9 @@ filetype plugin on
 
 " Color Scheme
 let g:gruvbox_italic = 1
-colorscheme pencil
+colorscheme space-vim-dark
 set background=dark
+hi Comment cterm=italic
 let g:onedark_termcolors = 1
 set termguicolors
 
@@ -120,5 +122,4 @@ inoremap {<CR> {<CR>}<Esc>ko
 
 " Alacritty fix
 set ttymouse=sgr
-
 
