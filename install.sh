@@ -11,6 +11,8 @@ then
     cp ./bash/.bashrc ~/.bashrc
     cp ./vim/.vimrc ~/.vimrc
     cp ./zsh/.zshrc ~/.zshrc
+    echo "copying vim run and compile script to documents..."
+    cp ./vim/vim\ script ~/Documents -r
     echo "copying alacritty config..."
     echo ' '
     cp ./alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml

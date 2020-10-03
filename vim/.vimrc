@@ -35,6 +35,7 @@ call vundle#end()
 filetype plugin indent on
 
 " general
+syntax on
 set tabstop=4 
 set softtabstop=4
 set shiftwidth=4
@@ -47,7 +48,6 @@ set ruler
 set clipboard=unnamedplus
 set cursorline
 set mouse=a
-syntax on
 set laststatus=2
 set splitbelow splitright
 
@@ -67,7 +67,7 @@ filetype plugin on
 
 " Color Scheme
 let g:gruvbox_italic = 1
-colorscheme space-vim-dark
+colorscheme dracula
 set background=dark
 hi Comment cterm=italic
 let g:onedark_termcolors = 1
@@ -96,10 +96,12 @@ let g:python_highlight_space_errorss = 1
 map <F1> :NERDTreeToggle<CR>
 map <F3> :w<CR>
 map <F4> :q<CR>
-map <F5> :w! <bar> !clear && g++ -o %:r % -std=gnu++17 -Wall -Wshadow -Wextra<CR>
-map <F6> :w! <bar> !clear && gcc -o %:r % -std=c99 -Wall -lm -Wshadow -Wextra<CR>
-map <F8> :w! <bar> !clear && gcc -o %:r % -std=c99 -Wall -lm -Wshadow -Wextra && ./%:r<CR>
-map <F9> :w! <bar> !clear && g++ -o %:r % -std=gnu++17 -Wall -Wshadow -Wextra && ./%:r<CR>
+map <F5> :w! <bar> !clear && ~/Documents/vim\ script/./compile.sh %<CR>
+map <F9> :w! <bar> !clear && ~/Documents/vim\ script/./run.sh %<CR>
+" map <F5> :w! <bar> !clear && g++ -o %:r % -std=gnu++17 -Wall -Wshadow -Wextra<CR>
+" map <F6> :w! <bar> !clear && gcc -o %:r % -std=c99 -Wall -lm -Wshadow -Wextra<CR>
+" map <F8> :w! <bar> !clear && gcc -o %:r % -std=c99 -Wall -lm -Wshadow -Wextra && ./%:r<CR>
+" map <F9> :w! <bar> !clear && g++ -o %:r % -std=gnu++17 -Wall -Wshadow -Wextra && ./%:r<CR>
 nnoremap <F10> :wall! <bar>  !clear && javac Main.java && java Main<CR>
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -122,4 +124,5 @@ inoremap {<CR> {<CR>}<Esc>ko
 
 " Alacritty fix
 set ttymouse=sgr
+
 
