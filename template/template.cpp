@@ -34,12 +34,10 @@ int main()
     // freopen("input.in", "r", stdin);
     // freopen("output.out", "w", stdout);
 
-    solve();
-    
-    // int t;
+    int t = 1;
     // scanf("%d", &t);
-    // for(int tc = 1;tc <= t;++tc){
-    //     printf("Case #%d: ", tc);
-    //     solve();
-    // }
+    for(int tc = 1; tc <= t;++tc){
+        // printf("Case #%d: ", tc);
+        solve();
+    }
 }
