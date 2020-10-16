@@ -41,7 +41,7 @@ then
     # installing package from repo
     echo 'installing various applications (press ctrl + c to cancel)'
     echo ' '
-    yay -S gvim discord brave-bin alacritty exa audacious minetime-bin playerctl alsa winetricks firefox kdeconnect neofetch ripgrep noto-fonts-emoji noto-fonts-cjk mailspring gnome-keyring libgnome-keyring unrar bitwarden-bin update-grub pamac-aur pamac-aur-tray-appindicator-git
+    yay -S gvim discord brave-bin alacritty exa audacious minetime-bin playerctl alsa winetricks firefox kdeconnect neofetch ripgrep noto-fonts-emoji noto-fonts-cjk mailspring gnome-keyring libgnome-keyring unrar bitwarden-bin update-grub pamac-aur pamac-tray-appindicator-git
     
     echo 'setting up alacritty'
     echo ' '
