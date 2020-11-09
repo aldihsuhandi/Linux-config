@@ -1,5 +1,5 @@
 export ZSH="/home/aldih/.oh-my-zsh"
-ZSH_THEME="robbyrussell"
+ZSH_THEME="mytheme"
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
@@ -14,7 +14,6 @@ alias cl='clear'
 alias v='vim'
 alias sv='sudo vim'
 alias svim='sudo vim'
-alias htop='bashtop'
 alias grep='rg'
 alias df='df -h'
 
@@ -37,7 +36,7 @@ extract ()
       *.deb)       ar x $1      ;;
       *.tar.xz)    tar xf $1    ;;
       *.tar.zst)   unzstd $1    ;;      
-      *)           echo "'$1' cannot be extracted via extract" ;;
+      *)           echo "'$1' cannot be extracted via ex()" ;;
     esac
   else
     echo "'$1' is not a valid file"
@@ -60,10 +59,11 @@ compile ()
     fi
 }
 
+
 # powerline 
-function powerline_precmd() {
-    PS1="$(powerline-shell --shell zsh $?)"
-}
+# function powerline_precmd() {
+#     PS1="$(powerline-shell --shell zsh $?)"
+# }
 
 function install_powerline_precmd() {
   for s in "${precmd_functions[@]}"; do
@@ -85,17 +85,23 @@ compinit
 
 # coding template
 templatecpp(){
-    cp ~/Documents/cpp/template/template.cpp "$1"
+    cp $HOME/Documents/cpp/template/template.cpp "$1"
     vim "$1"
 }
 
 templatec(){
-    cp ~/Documents/c/template/template.c "$1"
+    cp $HOME/Documents/c/template/template.c "$1"
+    vim $1
+}
+
+templatemarkdown(){
+    cp $HOME/Documents/markdown\ template/template.md $1
     vim $1
 }
 
 alias tempcpp=templatecpp
 alias tempc=templatec
+alias tempmark=templatemarkdown
 
 # compiling code shortcut
 run_and_compile_java(){
@@ -114,9 +120,7 @@ alias l="ls"
 alias s="ls"
 
 # alias for package manager
-alias update='yay'
-alias search='pacman -Qs'
-alias ccache='yay -Scc --noconfirm'
+alias pac="$HOME/Documents/script/pac/./pac.sh"
 
 # curl?
 alias weather='curl wttr.in'

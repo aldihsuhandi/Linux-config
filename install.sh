@@ -8,14 +8,14 @@ if [ $inp = "Y" -o $inp = "y" ]
 then
     echo "copying .vimrc, .zshrc and .bashrc to home..."
     # echo ' '
-    cp ./bash/.bashrc ~/.bashrc
-    cp ./vim/.vimrc ~/.vimrc
-    cp ./zsh/.zshrc ~/.zshrc
+    cp ./bash/.bashrc $HOME/.bashrc
+    cp ./vim/.vimrc $HOME/.vimrc
+    cp ./zsh/.zshrc $HOME/.zshrc
     echo "copying vim run and compile script to documents..."
-    cp ./vim/vim\ script ~/Documents -r
+    cp ./vim/vim\ script $HOME/Documents -r
     echo "copying alacritty config..."
     echo ' '
-    cp ./alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+    cp ./alacritty/alacritty.yml $HOME/.config/alacritty/alacritty.yml
     echo "install vundle and powerline shell? [Y/N]"
     read inp2
     echo ' '
@@ -26,12 +26,18 @@ then
     fi
 elif [ $inp = "N" -o $inp = "n" ]
 then
+    # setting up pacman and yay script
+    mkdir $HOME/Documents/script
+    cp ./script/pac $HOME/Documents/script -drf
+
+    # setting up vim compile script
+    cp ./script/vim\ script $HOME/Documents -drf
 
     # setting up .vimrc and .bashrc
     echo 'setting up bash and vim'
     echo ' '
-    cp ./bash/.bashrc ~/.bashrc
-    cp ./vim/.vimrc ~/.vimrc
+    cp ./bash/.bashrc $HOME/.bashrc
+    cp ./vim/.vimrc $HOME/.vimrc
     ./script/vim.sh
     ./script/powerline.sh
 
@@ -41,12 +47,12 @@ then
     # installing package from repo
     echo 'installing various applications (press ctrl + c to cancel)'
     echo ' '
-    yay -S gvim discord_arch_electron brave-bin alacritty exa audacious minetime-bin playerctl alsa winetricks firefox kdeconnect neofetch ripgrep noto-fonts-emoji noto-fonts-cjk mailspring gnome-keyring libgnome-keyring unrar bitwarden-bin update-grub pamac-aur pamac-tray-appindicator-git
+    yay -S gvim discord_arch_electron brave-bin alacritty exa audacious minetime-bin playerctl alsa winetricks firefox kdeconnect neofetch ripgrep noto-fonts-emoji noto-fonts-cjk mailspring gnome-keyring libgnome-keyring unrar bitwarden-bin update-grub pamac-aur spotify ttf-hack ttf-ms-fonts ttf-opensans ttf-paratype ttf-tahoma ttf-vista-fonts ttf-wps-fonts ttf-roboto-mono ttf-roboto
     
     echo 'setting up alacritty'
     echo ' '
-    mkdir -p ~/.config/alacritty
-    cp ./alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+    mkdir -p $HOME/.config/alacritty
+    cp ./alacritty/alacritty.yml $HOME/.config/alacritty/alacritty.yml
 
     echo 'changing default github editor to vim'
     echo ' '
@@ -63,10 +69,10 @@ echo ' '
 
 if [ $var = "Y" -o $var = "y" ]
 then
-    mkdir -p ~/Documents/c/template
-    mkdir -p ~/Documents/cpp/template
-    cp ./template/template.cpp ~/Documents/cpp/template/template.cpp
-    cp ./template/template.c ~/Documents/c/template/template.c
+    mkdir -p $HOME/Documents/c/template
+    mkdir -p $HOME/Documents/cpp/template
+    cp ./template/template.cpp $HOME/Documents/cpp/template/template.cpp
+    cp ./template/template.c $HOME/Documents/c/template/template.c
 fi
 
 # setting up zsh

@@ -30,6 +30,7 @@ Plugin 'morhetz/gruvbox'
 Plugin 'sickill/vim-monokai'
 Plugin 'reedes/vim-colors-pencil'
 Plugin 'liuchengxu/space-vim-dark'
+Plugin 'fmoralesc/molokayo'
 
 call vundle#end()   
 filetype plugin indent on
