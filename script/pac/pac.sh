@@ -41,9 +41,9 @@ then
         echo "incomplete command"
     elif [ $flag2 = "installed" ]
     then
-        pacman -Qs $3
+        yay -Qs $3
     else
-        pacman -Ss $2
+        yay -Ss $2
     fi
 elif [ $operation = "clear" ]
 then

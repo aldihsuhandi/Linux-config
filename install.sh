@@ -38,6 +38,7 @@ then
     echo ' '
     cp ./bash/.bashrc $HOME/.bashrc
     cp ./vim/.vimrc $HOME/.vimrc
+    cp ./zsh/.zshrc $HOME/.zshrc
     ./script/vim.sh
     ./script/powerline.sh
 

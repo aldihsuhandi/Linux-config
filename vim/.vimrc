@@ -14,6 +14,7 @@ Plugin 'preservim/nerdtree'
 Plugin 'ap/vim-css-color'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'junegunn/goyo.vim'
 
 " Syntax Highlight
 Plugin 'octol/vim-cpp-enhanced-highlight'
@@ -31,6 +32,7 @@ Plugin 'sickill/vim-monokai'
 Plugin 'reedes/vim-colors-pencil'
 Plugin 'liuchengxu/space-vim-dark'
 Plugin 'fmoralesc/molokayo'
+Plugin 'netsgnut/arctheme.vim'
 
 call vundle#end()   
 filetype plugin indent on
