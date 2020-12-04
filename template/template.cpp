@@ -2,37 +2,28 @@
 #define fi first
 #define se second
 #define pb push_back
-#define pqueue priority_queue
 
+ll power(ll a, ll b);
+int gcd(int a, int b);
+void fileopen();
+
+template<class T> using pqueue = priority_queue<T>;
+template<class T> using rpqueue = priority_queue<T, vector<T>, greater<T> >;
 using namespace std;
 using ll = long long;
 using ull = unsigned long long;
+using ld = long double;
 
 const int INF = INT_MAX;
 
-// ll power(ll a, ll b)
-// {
-//     ll ret = 1;
-//     while(b > 0){
-//         if(b & 1)
-//             ret = ret * a;
-        
-//         a = a * a;
-//         b /= 2;
-//     }
-
-//     return ret;
-// }
-
 void solve()
 {
-    
+    ;
 }
 
 int main()
 {
-    // freopen("input.in", "r", stdin);
-    // freopen("output.out", "w", stdout);
+    // fileopen();
 
     int t = 1;
     // scanf("%d", &t);
@@ -40,4 +31,31 @@ int main()
         // printf("Case #%d: ", tc);
         solve();
     }
+}
+
+void fileopen()
+{
+    freopen("input.in", "r", stdin);
+    freopen("output.out", "w", stdout);
+}
+
+ll power(ll a, ll b)
+{
+    if(b == 0)
+        return 1;
+    if(b == 1)
+        return a;
+    if(b % 2 == 0)
+    {
+        ll ret = power(a, b / 2);
+        return ret * ret;
+    }
+    return power(a, b - 1) * a;
+}
+
+int gcd(int a, int b)
+{
+    if(b == 0)
+        return a;
+    return gcd(b, a % b);
 }

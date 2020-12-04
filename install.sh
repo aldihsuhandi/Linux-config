@@ -28,7 +28,8 @@ elif [ $inp = "N" -o $inp = "n" ]
 then
     # setting up pacman and yay script
     mkdir $HOME/Documents/script
-    cp ./script/pac $HOME/Documents/script -drf
+    cp ./script/pac $HOME/Documents/script/ -drf
+    cp ./script/tempcppprob $HOME/Documents/script/ -drf
 
     # setting up vim compile script
     cp ./script/vim\ script $HOME/Documents -drf

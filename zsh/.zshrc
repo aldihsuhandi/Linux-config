@@ -11,6 +11,7 @@ alias mkdir='mkdir -p'
 alias free='free -h -m'
 alias kernel='uname -r'
 alias cl='clear'
+alias claer='cl'
 alias v='vim'
 alias sv='sudo vim'
 alias svim='sudo vim'
@@ -85,21 +86,22 @@ compinit
 
 # coding template
 templatecpp(){
-    cp $HOME/Documents/cpp/template/template.cpp "$1"
-    vim "$1"
+    cp ~/Documents/cpp/template/template.cpp "$1.cpp"
+    vim "$1.cpp"
 }
 
 templatec(){
-    cp $HOME/Documents/c/template/template.c "$1"
-    vim $1
+    cp ~/Documents/c/template/template.c "$1.c"
+    vim "$1.c"
 }
 
 templatemarkdown(){
-    cp $HOME/Documents/markdown\ template/template.md $1
-    vim $1
+    cp ~/Documents/markdown\ template/template.md "$1.md"
+    vim "$1.md"
 }
 
 alias tempcpp=templatecpp
+alias tempcppprob=$HOME/Documents/script/tempcppprob/./tempcppprob.sh
 alias tempc=templatec
 alias tempmark=templatemarkdown
 
@@ -120,8 +122,18 @@ alias l="ls"
 alias s="ls"
 
 # alias for package manager
-alias pac="$HOME/Documents/script/pac/./pac.sh"
+alias pac="$HOME/Documents/script/pac/./pac"
 
 # curl?
 alias weather='curl wttr.in'
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+
+# neofetch
+# neo(){
+#     neofetch > nf.in
+#     ~/./test
+#     cat nf.out
+#     rm -f nf.in nf.out
+# }
+
+# alias neofetch=neo

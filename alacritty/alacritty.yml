@@ -10,7 +10,7 @@ window:
 scrolling:
   history: 10000
   multiplier: 2
-background_opacity: 1
+background_opacity: 0.97
 
 # font configuration
 font:
@@ -23,7 +23,7 @@ font:
   italic:
     family: hack
     style: Italic
-  size: 12.5
+  size: 11.5
 
 # Colors
 schemes:
