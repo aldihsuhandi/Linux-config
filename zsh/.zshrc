@@ -1,5 +1,5 @@
 export ZSH="/home/aldih/.oh-my-zsh"
-ZSH_THEME="mytheme"
+ZSH_THEME="robbyrussell"
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 

@@ -105,7 +105,7 @@ alias l="ls"
 alias s="ls"
 
 # alias for package manager
-alias pac="$HOME/Documents/script/pac/./pac.sh"
+alias pac="$HOME/Documents/script/pac/./pac"
 
 # curl?
 alias weather='curl wttr.in'
