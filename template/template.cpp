@@ -2,18 +2,17 @@
 #define fi first
 #define se second
 #define pb push_back
-
-ll power(ll a, ll b);
-int gcd(int a, int b);
-void fileopen();
+using namespace std;
 
 template<class T> using pqueue = priority_queue<T>;
 template<class T> using rpqueue = priority_queue<T, vector<T>, greater<T> >;
-using namespace std;
 using ll = long long;
 using ull = unsigned long long;
 using ld = long double;
 
+ll power(ll a, ll b);
+int gcd(int a, int b);
+void fileopen();
 const int INF = INT_MAX;
 
 void solve()
