@@ -1,6 +1,6 @@
 export ZSH="/home/aldih/.oh-my-zsh"
-ZSH_THEME="robbyrussell"
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+# ZSH_THEME="robbyrussell"
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting ssh-agent)
 source $ZSH/oh-my-zsh.sh
 
 # general alias
@@ -11,10 +11,10 @@ alias mkdir='mkdir -p'
 alias free='free -h -m'
 alias kernel='uname -r'
 alias cl='clear'
-alias claer='cl'
+alias claer='clear'
 alias v='vim'
 alias sv='sudo vim'
-alias svim='sudo vim'
+alias svim='sudoedit'
 alias grep='rg'
 alias df='df -h'
 
@@ -86,22 +86,22 @@ compinit
 
 # coding template
 templatecpp(){
-    cp ~/Documents/cpp/template/template.cpp "$1.cpp"
+    cp $HOME/Documents/cpp/template/template.cpp "$1.cpp"
     vim "$1.cpp"
 }
 
 templatec(){
-    cp ~/Documents/c/template/template.c "$1.c"
-    vim "$1.c"
+    cp $HOME/Documents/c/template/template.c "$1.c"
+    vim $1.c
 }
 
 templatemarkdown(){
-    cp ~/Documents/markdown\ template/template.md "$1.md"
-    vim "$1.md"
+    cp $HOME/Documents/markdown\ template/template.md $1.md
+    vim $1.md
 }
 
 alias tempcpp=templatecpp
-alias tempcppprob=$HOME/Documents/script/tempcppprob/./tempcppprob.sh
+alias tempcppprob=$HOME/Documents/script/tempcppprob/./script
 alias tempc=templatec
 alias tempmark=templatemarkdown
 
@@ -127,13 +127,3 @@ alias pac="$HOME/Documents/script/pac/./pac"
 # curl?
 alias weather='curl wttr.in'
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
-
-# neofetch
-# neo(){
-#     neofetch > nf.in
-#     ~/./test
-#     cat nf.out
-#     rm -f nf.in nf.out
-# }
-
-# alias neofetch=neo
