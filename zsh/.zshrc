@@ -1,5 +1,5 @@
 export ZSH="/home/aldih/.oh-my-zsh"
-# ZSH_THEME="robbyrussell"
+ZSH_THEME="robbyrussell"
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting ssh-agent)
 source $ZSH/oh-my-zsh.sh
 
@@ -127,3 +127,10 @@ alias pac="$HOME/Documents/script/pac/./pac"
 # curl?
 alias weather='curl wttr.in'
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+
+
+# ssh
+ssh-add  $HOME/ssh/github/aldih
+clear
+# neofetch
+eval "$(starship init zsh)"
