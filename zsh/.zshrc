@@ -128,9 +128,5 @@ alias pac="$HOME/Documents/script/pac/./pac"
 alias weather='curl wttr.in'
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 
-
-# ssh
-ssh-add  $HOME/ssh/github/aldih
+# prelaunch command
 clear
-# neofetch
-eval "$(starship init zsh)"
