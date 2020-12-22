@@ -100,12 +100,10 @@ map <F1> :NERDTreeToggle<CR>
 map <F3> :w<CR>
 map <F4> :q<CR>
 map <F5> :w! <bar> !clear && ~/Documents/vim\ script/./compile.sh %<CR>
+map <F8> :w! <bar> !clear && echo "Insert to IN" && cat > in<CR>
 map <F9> :w! <bar> !clear && ~/Documents/vim\ script/./run.sh %<CR>
-" map <F5> :w! <bar> !clear && g++ -o %:r % -std=gnu++17 -Wall -Wshadow -Wextra<CR>
-" map <F6> :w! <bar> !clear && gcc -o %:r % -std=c99 -Wall -lm -Wshadow -Wextra<CR>
-" map <F8> :w! <bar> !clear && gcc -o %:r % -std=c99 -Wall -lm -Wshadow -Wextra && ./%:r<CR>
-" map <F9> :w! <bar> !clear && g++ -o %:r % -std=gnu++17 -Wall -Wshadow -Wextra && ./%:r<CR>
-nnoremap <F10> :wall! <bar>  !clear && javac Main.java && java Main<CR>
+map <F10> :w! <bar> !clear && ~/Documents/vim\ script/./compile.sh % && ./%:r < in<CR>
+nnoremap <F11> :wall! <bar>  !clear && javac Main.java && java Main<CR>
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
