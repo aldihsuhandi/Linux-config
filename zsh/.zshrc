@@ -5,15 +5,15 @@ source $ZSH/oh-my-zsh.sh
 
 # general alias
 alias rm='rm -i'
-alias mv='mv -i'
-alias cp='cp -i'
+# alias mv='mv -i'
+# alias cp='cp -i'
 alias mkdir='mkdir -p'
 alias free='free -h -m'
 alias kernel='uname -r'
 alias cl='clear'
 alias claer='clear'
 alias v='vim'
-alias sv='sudo vim'
+alias sv='sudoedit'
 alias svim='sudoedit'
 alias grep='rg'
 alias df='df -h'
@@ -66,18 +66,18 @@ compile ()
 #     PS1="$(powerline-shell --shell zsh $?)"
 # }
 
-function install_powerline_precmd() {
-  for s in "${precmd_functions[@]}"; do
-    if [ "$s" = "powerline_precmd" ]; then
-      return
-    fi
-  done
-  precmd_functions+=(powerline_precmd)
-}
+# function install_powerline_precmd() {
+#   for s in "${precmd_functions[@]}"; do
+#     if [ "$s" = "powerline_precmd" ]; then
+#       return
+#     fi
+#   done
+#   precmd_functions+=(powerline_precmd)
+# }
 
-if [ "$TERM" != "linux" ]; then
-    install_powerline_precmd
-fi
+# if [ "$TERM" != "linux" ]; then
+#     install_powerline_precmd
+# fi
 
 # autocd
 setopt  autocd autopushd
@@ -121,6 +121,12 @@ alias sl="ls"
 alias l="ls"
 alias s="ls"
 
+# devour alias
+alias eog="devour eog"
+alias celluloid="devour celluloid"
+alias mpv="devour mpv"
+alias okular="devour okular"
+
 # alias for package manager
 alias pac="$HOME/Documents/script/pac/./pac"
 
@@ -129,4 +135,8 @@ alias weather='curl wttr.in'
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 
 # prelaunch command
+if [ -f ~/.personal_alias ]; then
+    source ~/.personal_alias
+fi
 clear
+eval "$(starship init zsh)"

@@ -49,16 +49,17 @@ then
     # installing package from repo
     echo 'installing various applications (press ctrl + c to cancel)'
     echo ' '
-    yay -S gvim discord firefox alacritty exa audacious minetime-bin playerctl alsa winetricks firefox kdeconnect neofetch ripgrep noto-fonts-emoji noto-fonts-cjk geary gnome-keyring libgnome-keyring unrar bitwarden-bin update-grub pamac-aur spotify spicetify-cli ttf-hack ttf-ms-fonts ttf-opensans ttf-paratype ttf-tahoma ttf-vista-fonts ttf-wps-fonts ttf-roboto-mono ttf-roboto --noconfirm
+    yay -S gvim discord firefox alacritty exa audacious minetime-bin playerctl alsa winetricks firefox kdeconnect neofetch ripgrep noto-fonts-emoji noto-fonts-cjk geary gnome-keyring libgnome-keyring unrar bitwarden-bin update-grub stubby spotify spicetify-cli onlyoffice ttf-hack ttf-ms-fonts ttf-opensans ttf-paratype ttf-tahoma ttf-wps-fonts ttf-roboto-mono ttf-roboto --noconfirm
     
     echo 'setting up alacritty'
     echo ' '
     mkdir -p $HOME/.config/alacritty
     cp ./alacritty/alacritty.yml $HOME/.config/alacritty/alacritty.yml
 
-    echo 'changing default github editor to vim'
+    echo 'changing default editor to vim'
     echo ' '
     git config --global core.editor "vim"
+    sudo bash -c 'echo EDITOR=vim >> /etc/environment'
 
 else
     echo 'there is nothing to do..'

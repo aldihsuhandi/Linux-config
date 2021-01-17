@@ -33,6 +33,7 @@ Plugin 'reedes/vim-colors-pencil'
 Plugin 'liuchengxu/space-vim-dark'
 Plugin 'fmoralesc/molokayo'
 Plugin 'netsgnut/arctheme.vim'
+Plugin 'NLKNguyen/papercolor-theme'
 
 call vundle#end()   
 filetype plugin indent on
@@ -46,7 +47,7 @@ set expandtab
 set smarttab
 set smartindent
 set autoindent
-set number
+set relativenumber number
 set ruler
 set clipboard=unnamedplus
 set cursorline
@@ -55,23 +56,26 @@ set laststatus=2
 set splitbelow splitright
 
 " cursor
-let &t_SI = "\<Esc>]50;CursorShape=2\x7"
-let &t_EI = "\<Esc>]50;CursorShape=0\x6"
+let &t_SI = "\e[4 q"
+let &t_EI = "\e[2 q"
 
 " statusline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline_theme = 'atomic'
-let g:airline_section_b = '%{strftime("%c")}'
-let g:airline_section_y = 'BN: %{bufnr("%")}'
+let g:airline_section_b = ''
+let g:airline_section_y = ''
+let g:airline_section_z = ''
+" let g:airline_theme = 'atomic'
+" let g:airline_section_b = '%{strftime("%c")}'
+" let g:airline_section_y = 'BN: %{bufnr("%")}'
 
 filetype plugin on
 
 " Color Scheme
 let g:gruvbox_italic = 1
-colorscheme dracula
-set background=dark
+colorscheme PaperColor
+set background=light
 hi Comment cterm=italic
 let g:onedark_termcolors = 1
 set termguicolors
@@ -125,5 +129,4 @@ inoremap {<CR> {<CR>}<Esc>ko
 
 " Alacritty fix
 set ttymouse=sgr
-
-
+hi Normal guibg=NONE ctermbg=NONE
