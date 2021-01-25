@@ -18,14 +18,14 @@ void search_package(std::vector<std::string> args)
         else
         {
             std::string cmd;
-            cmd = "yay -Qs " + args[2];
+            cmd = "paru -Qs " + args[2];
             system(cmd.c_str());
         }
     }
     else
     {
         std::string cmd;
-        cmd = "yay -Ss " + args[1];
+        cmd = "paru -Ss " + args[1];
         system(cmd.c_str());
     }
 }
@@ -37,7 +37,7 @@ void install_package(std::vector<std::string> args)
     else
     {
         std::string cmd;
-        cmd = "yay -S";
+        cmd = "paru -S";
         for(int i = 1;i < (int)args.size();++i)
             cmd += " " + args[i];
         system(cmd.c_str());
@@ -51,7 +51,7 @@ void uninstall_package(std::vector<std::string> args)
     else
     {
         std::string cmd;
-        cmd = "yay -R";
+        cmd = "paru -R";
         for(int i = 1;i < (int)args.size();++i)
             cmd += " " + args[i];
         system(cmd.c_str());
@@ -60,7 +60,7 @@ void uninstall_package(std::vector<std::string> args)
 
 void update()
 {
-    system("yay");
+    system("paru");
 }
 
 void refresh()
@@ -77,7 +77,7 @@ void cl(std::vector<std::string> args)
     else if(args[1] == "orphans")
     {
         FILE *package = popen("pacman -Qdtq", "r");
-        std::string cmd = "yay -R";
+        std::string cmd = "paru -R";
         int cnt = 0;
         while(!feof(package)){
             char tempPack[1000];

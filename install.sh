@@ -26,7 +26,7 @@ then
     fi
 elif [ $inp = "N" -o $inp = "n" ]
 then
-    # setting up pacman and yay script
+    # setting up pacman and paru script
     mkdir $HOME/Documents/script
     cp ./script/pac $HOME/Documents/script/ -drf
     cp ./script/tempcppprob $HOME/Documents/script/ -drf
@@ -43,13 +43,13 @@ then
     ./script/vim.sh
     ./script/powerline.sh
 
-    # running script for yay
-    ./script/yay.sh
+    # running script for paru
+    ./script/paru.sh
 
     # installing package from repo
     echo 'installing various applications (press ctrl + c to cancel)'
     echo ' '
-    yay -S gvim discord firefox alacritty exa audacious minetime-bin playerctl alsa winetricks firefox kdeconnect neofetch ripgrep noto-fonts-emoji noto-fonts-cjk geary gnome-keyring libgnome-keyring unrar bitwarden-bin update-grub stubby spotify spicetify-cli onlyoffice ttf-hack ttf-ms-fonts ttf-opensans ttf-paratype ttf-tahoma ttf-wps-fonts ttf-roboto-mono ttf-roboto --noconfirm
+    paru -S gvim discord firefox alacritty exa audacious minetime-bin playerctl alsa winetricks firefox kdeconnect neofetch ripgrep noto-fonts-emoji noto-fonts-cjk geary gnome-keyring libgnome-keyring unrar bitwarden-bin update-grub stubby spotify spicetify-cli onlyoffice ttf-hack ttf-ms-fonts ttf-opensans ttf-paratype ttf-tahoma ttf-wps-fonts ttf-roboto-mono ttf-roboto --noconfirm
     
     echo 'setting up alacritty'
     echo ' '
